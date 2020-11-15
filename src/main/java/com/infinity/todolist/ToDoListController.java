@@ -14,13 +14,13 @@ public class ToDoListController {
 	@Autowired
 	private TaskRepository taskRepository;
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "https://infinity052.github.io")
 	@GetMapping("/")
 	List<Task> getTasks(){
 		return taskRepository.findAll();
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "https://infinity052.github.io")
 	@PostMapping("/add")
 	Task addTask(String task){
 		Task newTask = new Task(task);
@@ -28,7 +28,7 @@ public class ToDoListController {
 		return newTask;
 	}
 
-	@CrossOrigin(origins = "http://localhost:3000")
+	@CrossOrigin(origins = "https://infinity052.github.io")
 	@DeleteMapping("/delete")
 	void deleteTask(long id) {
 		taskRepository.deleteById(id);
